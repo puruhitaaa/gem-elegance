@@ -1,18 +1,31 @@
 {
-  "name": "aruna-agency",
+  "name": "nextbet-shadlysia",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "preview": "next build && next start",
     "lint": "biome check",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "ba:generate": "npx @better-auth/cli generate --config=src/server/better-auth",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@elysiajs/eden": "^1.4.5",
+    "@t3-oss/env-nextjs": "^0.13.8",
+    "better-auth": "^1.4.5",
+    "drizzle-orm": "^0.44.7",
+    "elysia": "^1.4.17",
     "next": "16.0.6",
+    "postgres": "^3.4.7",
     "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react-dom": "19.2.0",
+    "zod": "^4.1.13"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.0",
@@ -21,7 +34,9 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
+    "drizzle-kit": "^0.31.7",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }
