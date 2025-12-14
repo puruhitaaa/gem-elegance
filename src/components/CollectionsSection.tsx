@@ -42,8 +42,11 @@ export function CollectionsSection() {
 
       {/* Grid */}
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-        {collections.map((item, index) => (
-          <div key={index} className='flex flex-col gap-4 group cursor-pointer'>
+        {collections.map((item) => (
+          <div
+            key={item.alt}
+            className='flex flex-col gap-4 group cursor-pointer'
+          >
             <div className='relative aspect-square w-full overflow-hidden bg-[#faefe5]'>
               <Image
                 src={item.image}

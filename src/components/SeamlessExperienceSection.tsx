@@ -5,26 +5,24 @@ export function SeamlessExperienceSection() {
   return (
     <section className='flex flex-col lg:flex-row w-full min-h-screen'>
       {/* Left Side - Image & "Celebrate" Text */}
-      <div className='w-full lg:w-1/2 relative bg-linear-to-br from-zinc-50 to-zinc-300 flex items-end p-8 md:p-16 lg:p-24 overflow-hidden'>
-        {/* Necklace Image */}
-        <div className='absolute top-0 left-0 right-0 h-[70%] flex justify-center pt-12 md:pt-24 pointer-events-none'>
-          <div className='relative w-[80%] h-full max-w-lg'>
-            <Image
-              src='/images/collection-necklace.png'
-              alt='Golden Necklace'
-              fill
-              className='object-contain drop-shadow-2xl'
-              priority
-            />
-          </div>
-        </div>
+      <div className='w-full lg:w-1/2 relative flex items-end p-8 md:p-16 lg:p-24 overflow-hidden'>
+        {/* Background Image */}
+        <Image
+          src='/images/collection-necklace.png'
+          alt='Golden Necklace'
+          fill
+          className='object-cover'
+          priority
+        />
+        {/* Dark overlay for better text readability */}
+        <div className='absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent' />
 
         {/* Text */}
         <div className='relative z-10'>
-          <h2 className='font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.9] text-white drop-shadow-xs'>
+          <h2 className='font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.9] text-white drop-shadow-lg'>
             Celebrate
           </h2>
-          <h2 className='font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.9] text-zinc-900 italic'>
+          <h2 className='font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.9] text-white/90 italic drop-shadow-lg'>
             Life&apos;s Moments.
           </h2>
         </div>
@@ -47,7 +45,10 @@ export function SeamlessExperienceSection() {
           </h2>
 
           <Link href='/collections' className='inline-block'>
-            <button className='group bg-white text-zinc-900 px-8 py-4 text-sm font-bold tracking-[0.2em] uppercase hover:bg-zinc-200 transition-colors duration-300'>
+            <button
+              className='group bg-white text-zinc-900 px-8 py-4 text-sm font-bold tracking-[0.2em] uppercase hover:bg-zinc-200 transition-colors duration-300'
+              type='button'
+            >
               Discover More
             </button>
           </Link>
