@@ -4,7 +4,7 @@ export function AboutSection() {
   return (
     <section className='w-full bg-[#faefe5] py-24 px-8 md:px-16 lg:px-24 text-center'>
       {/* Header */}
-      <h2 className='text-[#a84408] font-bold text-sm uppercase tracking-wider mb-12'>
+      <h2 className='text-[#a84408] font-bold uppercase tracking-wider mb-12'>
         About Us
       </h2>
 
